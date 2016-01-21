@@ -13,10 +13,10 @@ defmodule Caesar.Cipher do
 
   ## Examples
 
-      iex> Caesar.Cipher.apply_shift("hello world!", 1)
+      iex> Caesar.Cipher.encrypt("hello world!", 1)
       "gdkkn vnqkc!"
   """
-  def apply_shift(msg, shift) do
+  def encrypt(msg, shift) do
     Logger.debug("encrypting: \"#{msg}\" with a shift value: #{shift}")
     msg
       |> to_char_list
